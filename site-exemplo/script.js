@@ -1,10 +1,17 @@
-let spaceship = "Elemental"
-let velocity = 20
 
-// console.log(spaceship.length == 9 || velocity > 15)
+let lista = document.getElementById('lista');
 
-// console.log(velocity > 10 || velocity < 19)
+lista.dataset.n = 4;
 
-//console.log(velocity < 17 || spaceship == "Elemental")
+let id = parseInt(lista.getAttribute("data-id"));
+console.log(id);
 
-console.log(spaceship == "Golias" || velocity > 21)
+let num = parseInt(lista.dataset.n);
+
+let conteudo = ""
+
+for(let i = 0; i < num; i++){
+    conteudo += "<li>" + i + "</li>";
+}
+
+lista.innerHTML = conteudo;
